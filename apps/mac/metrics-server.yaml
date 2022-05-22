@@ -19,7 +19,6 @@ spec:
       kind: HelmRelease
       metadata:
         name: metrics-server
-        namespace: kube-system
       spec:
         values:
           commonLabels:
