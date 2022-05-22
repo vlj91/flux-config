@@ -9,6 +9,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/mac
+  path: ./apps/base
   prune: true
   validation: client
