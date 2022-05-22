@@ -14,3 +14,13 @@ spec:
   path: ./apps/base
   prune: true
   validation: client
+  patchesStrategicMerge:
+    - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+      kind: HelmRelease
+      metadata:
+        name: metrics-server
+        namespace: kube-system
+      spec:
+        values:
+          commonLabels:
+            environment: mac
