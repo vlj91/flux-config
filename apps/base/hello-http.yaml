@@ -6,7 +6,7 @@ metadata:
   namespace: default
 spec:
   interval: 1m
-  url: git@github.com:vlj91/hello-http
+  url: ssh://git@github.com:vlj91/hello-http.git
   ref:
     branch: master
 ---
