@@ -1,0 +1,22 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: generic-http
+  namespace: flux-system
+spec:
+  type: generic
+  address: https://webhook.site/054f90e7-3d84-47e1-9b7e-651217d3760a
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Alert
+metadata:
+  name: image-update-automation
+  namespace: flux-system
+spec:
+  providerRef:
+    name: generic-http
+  eventSeverity: info
+  eventSources:
+    - kind: ImageUpdateAutomation
+      name: '*'
