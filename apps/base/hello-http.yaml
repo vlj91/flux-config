@@ -16,7 +16,6 @@ metadata:
   name: hello-http
   namespace: default
 spec:
-  targetNamespace: default
   interval: 1m
   sourceRef:
     kind: GitRepository
