@@ -16,6 +16,7 @@ metadata:
 spec:
   providerRef:
     name: webhook
+    namespace: flux-system
   eventSeverity: info
   eventSources:
     - kind: Kustomization
