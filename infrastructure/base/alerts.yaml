@@ -20,3 +20,4 @@ spec:
   eventSources:
     - kind: Kustomization
       name: '*'
+      namespace: '*'
