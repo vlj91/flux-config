@@ -41,7 +41,7 @@ spec:
   interval: 1m
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: hello-http
     namespace: default
   path: ./apps/base/hello-http2
   prune: true
