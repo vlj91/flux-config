@@ -44,6 +44,6 @@ spec:
     name: hello-http
     namespace: default
   path: ./apps/base/hello-http2
-  prune: true
+  prune: false
   validation: client
   force: true
