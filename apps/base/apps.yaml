@@ -21,6 +21,6 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: default
-  path: ./apps/base/hello-http
+  path: ./apps/base/hello-http2
   prune: true
   validation: client
