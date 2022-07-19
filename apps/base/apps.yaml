@@ -46,3 +46,4 @@ spec:
   path: ./apps/base/hello-http2
   prune: true
   validation: client
+  force: true
