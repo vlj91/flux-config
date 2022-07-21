@@ -1,26 +1,3 @@
----
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImageRepository
-metadata:
-  name: hello-http
-  namespace: flux-system
-spec:
-  interval: 1m
-  image: ghcr.io/vlj91/hello-http
----
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImagePolicy
-metadata:
-  name: hello-http
-  namespace: flux-system
-spec:
-  imageRepositoryRef:
-    name: hello-http
-    namespace: flux-system
-  policy:
-    semver:
-      range: '>=0.0.1'
----
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
@@ -28,22 +5,6 @@ metadata:
   namespace: default
 spec:
   interval: 1m
-  url: https://github.com/vlj91/flux-config
+  url: https://github.com/vlj91/hello-http
   ref:
     branch: master
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: hello-http
-  namespace: default
-spec:
-  interval: 1m
-  sourceRef:
-    kind: GitRepository
-    name: hello-http
-    namespace: default
-  path: ./apps/base/hello-http2
-  prune: false
-  validation: client
-  force: true
