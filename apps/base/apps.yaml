@@ -19,6 +19,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./deploy/base
+  path: ./apps/base/hello-http
   prune: true
   interval: 1m
