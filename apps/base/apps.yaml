@@ -13,12 +13,12 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: hello-http
-  namespace: flux-system
+  namespace: hello-http
 spec:
   targetNamespace: default
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/base/hello-http
+  path: ./deploy/base
   prune: true
   interval: 1m
