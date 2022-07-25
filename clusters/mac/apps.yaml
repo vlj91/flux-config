@@ -10,4 +10,4 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./apps/base
-  prune: true
+  prune: false
